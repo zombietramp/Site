@@ -1,0 +1,21 @@
+<% provide(:title,'用户列表')%>
+<h1>用户列表</h1>
+
+<!--分页开始-->
+<%= will_paginate %>
+<!--
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= gravatar_for user, size: 52 %>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>-->
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
+
